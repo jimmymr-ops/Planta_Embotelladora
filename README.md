@@ -173,24 +173,6 @@ efectivas son:
 | `TIM2/3/4` | 0 | |
 | `EXTI0` — sensor de llenado | 1 | La única que puede ser expropiada |
 
-## Limitaciones conocidas
-
-Cuestiones detectadas en revisión y documentadas de forma explícita:
-
-- **El servo no está verificado.** La llamada a `HAL_TIM_PWM_Start()` que habilita la salida
-  PWM se añadió después de las pruebas en simulación, así que el reparto en dos filas es la
-  única parte del proceso que no se ha comprobado funcionando.
-- **Reanudación tras emergencia.** Al reanudar se arrancan los tres temporizadores sin
-  comprobar cuáles estaban activos antes de la parada, lo que puede provocar una transición
-  espuria a `TEMPORIZADOR_TERMINADO` en una etapa que estaba ociosa. El efecto es inofensivo
-  (reafirma un estado en el que la máquina ya está), pero es ruido.
-- **Llenado interrumpido.** Si la parada ocurre con la válvula abierta, al reanudar no se
-  reabre y la botella sale a medio llenar. La causa de fondo es que el estado `ESPERA`
-  representa a la vez «ociosa» y «llenando», así que al guardar el estado anterior no se
-  pueden distinguir; separar un estado `LLENANDO` lo resolvería.
-- **Sin antirrebote.** El pulsador de emergencia no filtra rebotes mecánicos. En simulación no
-  se aprecia; en hardware real un rebote alternaría varias veces entre parar y reanudar.
-
 ## Licencia
 
 Los ficheros bajo `Drivers/` son propiedad de STMicroelectronics y se distribuyen bajo sus
