@@ -1,0 +1,33 @@
+# ─── Salida de compilacion ────────────────────────────────────────────────────
+# STM32CubeIDE regenera estas carpetas al construir. Ademas el makefile generado
+# contiene rutas absolutas de la maquina, asi que nunca debe versionarse.
+Debug/
+Release/
+*.o
+*.d
+*.su
+*.cyclo
+*.elf
+*.bin
+*.hex
+*.map
+*.list
+
+# ─── Ficheros especificos de cada maquina ─────────────────────────────────────
+# Configuraciones de depuracion: guardan rutas absolutas del PC.
+*.launch
+# Inventario de ficheros generados: CubeMX lo recrea a partir del .ioc.
+.mxproject
+# Workspace de Eclipse, por si se abre uno dentro del repo.
+.metadata/
+
+# ─── Documentacion no publicada ───────────────────────────────────────────────
+# Memoria y presentacion quedan fuera; lo esencial esta resumido en el README.
+*.docx
+*.pptx
+
+# ─── Sistema operativo y Office ───────────────────────────────────────────────
+Thumbs.db
+desktop.ini
+.DS_Store
+~$*
