@@ -39,11 +39,11 @@ reanuda los temporizadores desde donde se quedaron.
 |---|---|
 | [`docs/esquema-planta.pdf`](docs/esquema-planta.pdf) | Esquema final, correspondiente al código de este repositorio |
 | [`docs/esquema-planta-preliminar.pdf`](docs/esquema-planta-preliminar.pdf) | Diseño previo, con multiplexores 74HC157 y otro reparto de pines |
-| [`docs/distribucion-pines.xlsx`](docs/distribucion-pines.xlsx) | Asignación completa de pines, tabla del 7 segmentos y cálculo de temporizadores |
+| [`docs/distribucion-pines.md`](docs/distribucion-pines.md) | Asignación completa de pines, tabla del 7 segmentos y cálculo de temporizadores |
 
 > **Nota sobre el esquema.** La leyenda del PDF final asigna los motores a `PA9`/`PA10`/`PA11`.
-> El pinout real implementado —y el que recoge la hoja de cálculo— es `PA8`/`PA9`/`PA10`, tal
-> y como aparece en la tabla de abajo y en `pinmap.h`. La válvula (`PE11`) y el servo (`PE9`)
+> El pinout real implementado —y el que recoge la distribución de pines— es `PA8`/`PA9`/`PA10`,
+> tal y como aparece en la tabla de abajo y en `pinmap.h`. La válvula (`PE11`) y el servo (`PE9`)
 > sí coinciden en las tres fuentes.
 
 ## Mapa de pines
